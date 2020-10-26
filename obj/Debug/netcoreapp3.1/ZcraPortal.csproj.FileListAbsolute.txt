@@ -42,3 +42,15 @@ C:\Users\Boston IT\Documents\Projects\ZcraPortal\bin\Debug\netcoreapp3.1\MySqlCo
 C:\Users\Boston IT\Documents\Projects\ZcraPortal\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
 C:\Users\Boston IT\Documents\Projects\ZcraPortal\bin\Debug\netcoreapp3.1\Pomelo.EntityFrameworkCore.MySql.dll
 C:\Users\Boston IT\Documents\Projects\ZcraPortal\bin\Debug\netcoreapp3.1\Pomelo.JsonObject.dll
+C:\Users\Boston IT\Documents\Projects\ZcraPortal\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Users\Boston IT\Documents\Projects\ZcraPortal\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\Boston IT\Documents\Projects\ZcraPortal\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\Boston IT\Documents\Projects\ZcraPortal\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\Boston IT\Documents\Projects\ZcraPortal\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\Boston IT\Documents\Projects\ZcraPortal\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Boston IT\Documents\Projects\ZcraPortal\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Boston IT\Documents\Projects\ZcraPortal\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\Boston IT\Documents\Projects\ZcraPortal\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Boston IT\Documents\Projects\ZcraPortal\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Boston IT\Documents\Projects\ZcraPortal\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Boston IT\Documents\Projects\ZcraPortal\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
