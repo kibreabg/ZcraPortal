@@ -47,6 +47,8 @@ namespace ZcraPortal.Controllers {
             return CreatedAtRoute (nameof (GetFirstGuideline), new { id = guidelineReadDto.Id }, guidelineReadDto);
         }
 
+        
+
         [HttpPut ("{id}")]
         public ActionResult<GuidelineUpdateDto> UpdateGuideline (GuidelineUpdateDto guidelineUpdateDto, int id) {
             var guidelineFromRepo = _repository.GetFirst<Guidelines> (x => x.Id == id);
