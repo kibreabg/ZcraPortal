@@ -36,6 +36,8 @@ namespace ZcraPortal {
                 optionsBuilder => optionsBuilder.ServerVersion (
                     new Version (10, 1, 26),
                     ServerType.MariaDb)));
+            // Register the Swagger generator, defining 1 or more Swagger documents
+            services.AddSwaggerGen();
             services.AddAutoMapper (AppDomain.CurrentDomain.GetAssemblies ());
             services.AddCors (options => {
                 options.AddDefaultPolicy (
@@ -77,6 +79,17 @@ namespace ZcraPortal {
             app.UseOptions ();
             app.UseCors ();
             //app.UseHttpsRedirection ();
+
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+            // specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
+
             app.UseRouting ();
             app.UseAuthentication ();
             app.UseAuthorization ();
