@@ -6,6 +6,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.JsonPatch;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
 using ZcraPortal.Data;
 using ZcraPortal.Dtos;
 using ZcraPortal.Model;
@@ -19,11 +20,13 @@ namespace ZcraPortal.Controllers
     {
         private readonly IZcraPortalRepo _repository;
         private IMapper _mapper;
+        private IConfiguration _configuration;
 
-        public GuidelinesController(IZcraPortalRepo repository, IMapper mapper)
+        public GuidelinesController(IZcraPortalRepo repository, IMapper mapper, IConfiguration configuration)
         {
             _repository = repository;
             _mapper = mapper;
+            _configuration = configuration;
         }
 
         [HttpGet]
@@ -68,8 +71,9 @@ namespace ZcraPortal.Controllers
             {
                 var uploadFolder = uploadFile.gtype;
                 var theFile = uploadFile.file;
+                string xampFolderUrl = _configuration["XampFolderUrl"].ToString();
 
-                var uploadPath = Path.Combine("C:\\xampp\\htdocs\\zhcra", uploadFolder);
+                var uploadPath = Path.Combine(xampFolderUrl, uploadFolder);
 
                 if (!Directory.Exists(uploadPath))
                     Directory.CreateDirectory(uploadPath);

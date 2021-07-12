@@ -25,6 +25,8 @@ namespace ZcraPortal.Controllers {
         private readonly IZcraPortalRepo _repository;
         private readonly JWTSettings _jwtsettings;
         private readonly IMapper _mapper;
+        private string developmentString = "http://localhost:5000/api/Users/Login";
+        private string productionString = "http://portal.zcra.com/zcrabackend/api/Users/Login";
 
         public UsersController (IZcraPortalRepo repository, IOptions<JWTSettings> jwtsettings, IMapper mapper) {
             _repository = repository;
@@ -243,7 +245,7 @@ namespace ZcraPortal.Controllers {
                 Subject = new ClaimsIdentity (new Claim[] {
                 new Claim (ClaimTypes.Name, Convert.ToString (userId))
                 }),
-                Issuer = "http://localhost:5000/api/Users/Login",
+                Issuer = developmentString,
                 Expires = DateTime.UtcNow.AddDays (1),
                 SigningCredentials = new SigningCredentials (new SymmetricSecurityKey (key),
                 SecurityAlgorithms.HmacSha256Signature)
