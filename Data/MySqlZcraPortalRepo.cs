@@ -24,6 +24,11 @@ namespace ZcraPortal.Data {
             return _context.Set<T> ().ToList ();
         }
 
+        public IEnumerable<T> GetSomeById<T>(Expression<Func<T, bool>> expression) where T : class
+        {
+            return _context.Set<T>().Where<T>(expression).ToList();
+        }
+
         public T GetFirst<T> (Expression<Func<T, bool>> expression) where T : class {
             return _context.Set<T> ().FirstOrDefault (expression);
         }
